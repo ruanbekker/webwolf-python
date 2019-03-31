@@ -9,9 +9,9 @@ def application(environ, start_response):
     output = environ['UNIQUE_ID']
     start_response('200 OK', [('Content-type', 'text/html')])
     #return str(output)
-    from myapp import app as foo
-    output = foo
-    return output
+    from myapp import app as application
+    #output = foo
+    #return output
     #yield output.encode('utf-8')
 
 #import sys

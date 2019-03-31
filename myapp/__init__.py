@@ -30,8 +30,8 @@ def hello():
     if request.method == 'POST':
         name=request.form['name']
         surname=request.form['surname']
-  email=request.form['email']
-  password=request.form['password']
+        email=request.form['email']
+        password=request.form['password']
 
         if form.validate():
             write_to_disk(name, surname, email)

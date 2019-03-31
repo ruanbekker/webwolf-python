@@ -9,7 +9,10 @@ def application(environ, start_response):
     output = environ['UNIQUE_ID']
     start_response('200 OK', [('Content-type', 'text/html')])
     #return str(output)
-    yield output.encode('utf-8')
+    from myapp import app as foo
+    output = foo
+    return output
+    #yield output.encode('utf-8')
 
 #import sys
 #sys.path.insert(0,"/var/www/webroot/ROOT/")

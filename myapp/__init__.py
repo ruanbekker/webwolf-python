@@ -10,11 +10,12 @@ def hello():
 
 @app.route("/hello")
 def hello1():
+    print(environ)
     return "hello"
 
 @app.route("/envs")
 def envs():
-    return os.environ
+    return str(os.environ)
 
 if __name__ == "__main__":
     app.run()

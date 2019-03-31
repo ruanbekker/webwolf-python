@@ -6,9 +6,7 @@ def application(environ, start_response):
 
     #from pyinfo import pyinfo
     #output = pyinfo()
-    print(environ)
-    environ
-    output = environ['PATH']
+    output = environ['UNIQUE_ID']
     start_response('200 OK', [('Content-type', 'text/html')])
     #return str(output)
     yield output.encode('utf-8')

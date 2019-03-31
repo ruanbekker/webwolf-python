@@ -6,10 +6,10 @@ def application(environ, start_response):
 
     #from pyinfo import pyinfo
     #output = pyinfo()
-    output = environ
+    output = environ['NAME']
     start_response('200 OK', [('Content-type', 'text/html')])
-    return str(output)
-    #yield output.encode('utf-8')
+    #return str(output)
+    yield output.encode('utf-8')
 
 #import sys
 #sys.path.insert(0,"/var/www/webroot/ROOT/")

@@ -8,7 +8,8 @@ def application(environ, start_response):
     #output = pyinfo()
     output = environ
     start_response('200 OK', [('Content-type', 'text/html')])
-    yield output.encode('utf-8')
+    return str(output)
+    #yield output.encode('utf-8')
 
 #import sys
 #sys.path.insert(0,"/var/www/webroot/ROOT/")

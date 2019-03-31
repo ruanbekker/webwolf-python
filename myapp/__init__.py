@@ -15,7 +15,7 @@ def hello1():
 
 @app.route("/envs")
 def envs():
-    return str(os.environ)
+    return environ
 
 if __name__ == "__main__":
     app.run()
